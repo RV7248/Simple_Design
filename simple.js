@@ -1,0 +1,1 @@
+alert("This is just a responsive website design. Nothing more just a design. Press OK to load the website");
