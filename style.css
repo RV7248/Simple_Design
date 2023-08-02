@@ -1,0 +1,274 @@
+/* Universal selector ---> For no browser default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Light background color */
+body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #000000 100%);
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Main container with all content */
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*
+
+
+/* Logo image top */
+#logo_img {
+    height: 9rem;
+    width: 6rem;
+    display: block;
+    margin: auto;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*
+
+
+/* Navigation bar */
+/* #navbar ul {
+    padding: 0.7rem;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
+
+#navbar>ul {
+    padding: 0.7rem;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* Buttons navigation */
+.nav_btn {
+    font-weight: bolder;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* Added motion in Navigation button */
+.nav_btn:hover {
+    transition: 0.7s;
+
+    background-image: linear-gradient(to right, #464a4d 0%, #bfc8c5fb 51%, #626365 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 100px white;
+    border-radius: 4px;
+    display: block;
+    background-position: right center;
+    color: black;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*
+
+
+/* Main content box after navbar*/
+#main_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* First content box */
+#cont_one {
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 2rem white;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 1.3rem;
+    transition: 2s;
+}
+
+/* Content inside first container i.e main article [inside container (cont_one)] */
+.main_con {
+    position: relative;
+    top: 17vh;
+}
+
+
+/* On hover ---> mouse or touch movement */
+#cont_one:hover {
+    box-shadow: 0 0 1rem white;
+}
+
+
+/* Heading in the container */
+.main_con h1 {
+    font-size: 3.5rem;
+}
+
+
+/* Added button */
+#btn {
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.5rem white;
+    transition: 1s;
+}
+
+
+/* On hover */
+#btn:hover {
+    transition: 1s;
+    background-color: rgb(127, 127, 127);
+    color: white;
+    box-shadow: 0 0 1rem black;
+}
+
+
+/* Added a background image */
+#cont_one::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(Images/Image1.jpg)no-repeat center center/cover;
+    z-index: -1;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Second container having three other container */
+#cont_two {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* All three containers or boxes (services) */
+.services {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 2rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* Content inside the boxes or each container */
+.services img {
+    margin: 1em;
+    border-radius: 5px;
+    height: 23em;
+    width: 23em;
+}
+
+.services p {
+    width: 15em;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Footer (container) --> having logo and copyright i.e two another containers */
+#foot {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000000;
+}
+
+
+/* Additional layout */
+#foot div {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+
+/* Logo in the footer*/
+#foot div img {
+    height: 5em;
+    width: 4em;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Media queries for a responsive design */
+@media screen and (max-width: 500px) {
+    #navbar ul li {
+        font-size: 1rem;
+    }
+
+    .main_con {
+        font-size: 1rem;
+    }
+
+    #cont_two {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #cont_two .services img {
+        width: 16em;
+    }
+
+    #foot {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+
+/* Another extra media query for 290px */
+@media screen and (max-width: 290px) {
+    #cont_two .services img {
+        width: 10em;
+        height: 15em;
+    }
+}
